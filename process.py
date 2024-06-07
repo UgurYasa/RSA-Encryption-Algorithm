@@ -1,4 +1,6 @@
 import random
+
+
 def extended_gcd(a, b):
     if a == 0:
         return b, 0, 1
@@ -10,7 +12,7 @@ def extended_gcd(a, b):
 def mod_inverse(a, m):
     gcd, x, y = extended_gcd(a, m)
     if gcd != 1:
-        raise ValueError("Modüler ters yok, çünkü a ve m aralarında asal değil")
+        raise ValueError("No modular inverse, because a and m are not prime between them")
     else:
         return x % m
 
@@ -41,7 +43,7 @@ def format_binary_representation(number):
     formatted_representation = f"{binary_representation}"  
     return formatted_representation
 
-def modalmayacalisiyorum(text,key,n):
+def exponential_operations(text,key,n):
     elements = format_binary_representation(key)[::-1]
     a = 1
     if elements[0] == '1':
